@@ -1,0 +1,7 @@
+.filterWhite {
+    filter: invert(99%);
+}
+
+.filterGray {
+    filter: invert(50%);
+}
