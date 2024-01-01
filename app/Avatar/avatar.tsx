@@ -2,10 +2,8 @@ import styles from "./avatar.module.css";
 
 const Avatar = (prop:  {size: number, src: string} ) => {
   return (
-    <span className={styles.avatar} style={{ "--size": `${prop.size}px` } as object}>
+    <span className={styles.avatar} style={{width: prop.size, height: prop.size}}>
       <img
-        width={prop.size}
-        height={prop.size}
         decoding="async"
         loading="lazy"
         {...{ async: true }}
