@@ -9,7 +9,7 @@ const Navbar = () => {
           <nav className="flex justify-between text-white w-screen">
             <div className="px-5 xl:px-12 py-6 flex w-full items-center">
               <a className="text-3xl font-bold font-heading" href="#">
-                <Avatar size={64} src={"/avatar/choix.webp"}/>
+                <Avatar size={process.env.NAVBAR_AVATAR_SIZE? +process.env.NAVBAR_AVATAR_SIZE : 64} src={`${process.env.NAVBAR_AVATAR_URL}`}/>
               </a>
               <ul className="hidden md:flex px-4 mx-auto font-semibold font-heading space-x-12">
                 <li><a className="hover:text-gray-200" href="#">About me</a></li>
