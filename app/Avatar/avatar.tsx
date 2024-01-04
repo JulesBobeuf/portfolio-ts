@@ -1,9 +1,14 @@
+import Image from "next/image";
 import styles from "./avatar.module.css";
 
-const Avatar = (prop:  {size: number, src: string} ) => {
+const Avatar = (prop: { size: number; src: string }) => {
   return (
-    <span className={styles.avatar} style={{width: prop.size, height: prop.size}}>
-      <img
+    <span
+      className={styles.avatar}
+      style={{ width: prop.size, height: prop.size }}>
+      <Image
+        width={prop.size}
+        height={prop.size}
         decoding="async"
         loading="lazy"
         {...{ async: true }}
