@@ -1,3 +1,4 @@
+import Link from "next/link";
 import { Avatar } from "../Avatar";
 import styles from "./navbar.module.css";
 
@@ -8,13 +9,13 @@ const Navbar = () => {
         <section className="relative mx-auto">
           <nav className="flex justify-between text-white w-screen">
             <div className="px-5 xl:px-12 py-6 flex w-full items-center">
-              <a className="text-3xl font-bold font-heading" href="#">
-                <Avatar size={process.env.NAVBAR_AVATAR_SIZE? +process.env.NAVBAR_AVATAR_SIZE : 64} src={`${process.env.NAVBAR_AVATAR_URL}`}/>
-              </a>
+              <Link className="text-3xl font-bold font-heading" href="/">
+                <Avatar size={process.env.NAVBAR_AVATAR_SIZE? +process.env.NAVBAR_AVATAR_SIZE : 64} src={process.env.NAVBAR_AVATAR_URL ? process.env.NAVBAR_AVATAR_URL : "/avatar/choix.jpg"}/>
+              </Link>
               <ul className="hidden md:flex px-4 mx-auto font-semibold font-heading space-x-12">
-                <li><a className="hover:text-gray-200" href="#">About me</a></li>
-                <li><a className="hover:text-gray-200" href="#">Work</a></li>
-                <li><a className="hover:text-gray-200" href="#">Projects</a></li>
+                <li><Link className="hover:text-gray-200" href="#">About me</Link></li>
+                <li><Link className="hover:text-gray-200" href="#">Work</Link></li>
+                <li><Link className="hover:text-gray-200" href="/projects">Projects</Link></li>
               </ul>
               <div className="hidden xl:flex items-center space-x-5 items-center">
                 <a className={`hover:${styles.filterWhite}`} href="https://github.com/JulesBobeuf" target="_blank">

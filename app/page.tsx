@@ -1,31 +1,35 @@
-import Image from 'next/image'
-import { Avatar } from './Avatar'
-import Navbar from './Navbar/navbar'
+import Image from "next/image";
+import { Avatar } from "./Avatar";
+import Navbar from "./Navbar/navbar";
 
 export default function Home() {
   return (
-    <>
-      <Navbar/>
-      <main className="flex min-h-screen flex-col items-center justify-between p-8">
-        <div className="z-10 max-w-5xl w-full items-center justify-between font-mono lg:flex">
-          <Avatar size={process.env.AVATAR_SIZE ? +process.env.AVATAR_SIZE : 256} src={`${process.env.AVATAR_URL}`}></Avatar>
-        </div>
-        <div className="">
-          <p>cc</p>
-        </div>
+    <main className="flex min-h-screen flex-col items-center justify-between p-8 mx-72 bg-gray-500">
+      <div className="z-10 max-w-5xl w-full items-center justify-between font-mono lg:flex">
+        <Avatar
+          size={process.env.AVATAR_SIZE ? +process.env.AVATAR_SIZE : 256}
+          src={
+            process.env.AVATAR_URL
+              ? process.env.AVATAR_URL
+              : "/avatar/choix.jpg"
+          }
+        ></Avatar>
+      </div>
+      <div className="">
+        <p>cc</p>
+      </div>
 
-        <div className="">
-          <p>cc</p>
-        </div>
+      <div className="">
+        <p>cc</p>
+      </div>
 
-        <div className="">
-          <p>cc</p>
-        </div>
+      <div className="">
+        <p>cc</p>
+      </div>
 
-        <div className="">
-          <p>cc</p>
-        </div>
-      </main>
-    </>
-  )
+      <div className="">
+        <p>cc</p>
+      </div>
+    </main>
+  );
 }
