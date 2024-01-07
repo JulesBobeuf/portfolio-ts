@@ -2,7 +2,7 @@ import Link from "next/link";
 import { Avatar } from "../Avatar";
 import styles from "./navbar.module.css";
 
-const Navbar = () => {
+const navbar = () => {
   return (
     <>
       <div className="flex flex-wrap place-items-center">
@@ -41,4 +41,4 @@ const Navbar = () => {
   );
 };
 
-export default Navbar;
+export default navbar;
