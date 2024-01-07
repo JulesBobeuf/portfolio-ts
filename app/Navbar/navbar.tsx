@@ -13,7 +13,7 @@ const navbar = () => {
                 <Avatar size={process.env.NAVBAR_AVATAR_SIZE? +process.env.NAVBAR_AVATAR_SIZE : 64} src={process.env.NAVBAR_AVATAR_URL ? process.env.NAVBAR_AVATAR_URL : "/avatar/choix.jpg"}/>
               </Link>
               <ul className="hidden md:flex px-4 mx-auto font-semibold font-heading space-x-12">
-                <li><Link className="hover:text-gray-200" href="#">About me</Link></li>
+                <li><Link className="hover:text-gray-200" href="/">About me</Link></li>
                 <li><Link className="hover:text-gray-200" href="#">Work</Link></li>
                 <li><Link className="hover:text-gray-200" href="/projects">Projects</Link></li>
               </ul>
