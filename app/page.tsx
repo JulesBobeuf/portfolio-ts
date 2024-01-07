@@ -4,8 +4,7 @@ import Navbar from "./Navbar/navbar";
 
 export default function Home() {
   return (
-    <main className="flex min-h-screen flex-col items-center justify-between p-8 mx-72 bg-gray-500">
-      <div className="z-10 max-w-5xl w-full items-center justify-between font-mono lg:flex">
+<>      <div className="z-10 max-w-5xl w-full items-center justify-between font-mono lg:flex">
         <Avatar
           size={process.env.AVATAR_SIZE ? +process.env.AVATAR_SIZE : 256}
           src={
@@ -30,6 +29,6 @@ export default function Home() {
       <div className="">
         <p>cc</p>
       </div>
-    </main>
+    </>
   );
 }
