@@ -1,13 +1,19 @@
-import { Avatar } from "../Avatar";
-import { Navbar } from "../Navbar";
+import listPropProjectCard, {propProjectCard} from "./dataProjects";
+import { ProjectCard } from "./projectCard";
 
 export default function Home() {
     return (
       <>
-        <main className="flex min-h-screen flex-col items-center justify-between p-8">
-          <div className="z-10 max-w-5xl w-full items-center justify-between font-mono lg:flex">
-            projects
-          </div>
+        <main className="flex min-h-screen flex-col items-center justify-between p-8 mx-72 bg-gray-500">
+            <h1 className="m-16 text-4xl">Projects</h1>
+                <div className="grid grid-cols-4 gap-4 my-8">
+                    {
+                        listPropProjectCard.map((prop: propProjectCard) => (
+                                <ProjectCard title={prop.title} desc={prop.desc} imgUrl={prop.imgUrl} href={prop.href} 
+                                technos={prop.technos}></ProjectCard>
+                        ))
+                    }
+                </div>
         </main>
       </>
     )
