@@ -2,7 +2,7 @@ import Link from "next/link";
 import { Avatar } from "../Avatar";
 import styles from "./navbar.module.css";
 
-const Navbar = () => {
+const navbar = () => {
   return (
     <>
       <div className="flex flex-wrap place-items-center">
@@ -13,19 +13,16 @@ const Navbar = () => {
                 <Avatar size={process.env.NAVBAR_AVATAR_SIZE? +process.env.NAVBAR_AVATAR_SIZE : 64} src={process.env.NAVBAR_AVATAR_URL ? process.env.NAVBAR_AVATAR_URL : "/avatar/choix.jpg"}/>
               </Link>
               <ul className="hidden md:flex px-4 mx-auto font-semibold font-heading space-x-12">
-                <li><Link className="hover:text-gray-200" href="#">About me</Link></li>
+                <li><Link className="hover:text-gray-200" href="/">About me</Link></li>
                 <li><Link className="hover:text-gray-200" href="#">Work</Link></li>
                 <li><Link className="hover:text-gray-200" href="/projects">Projects</Link></li>
               </ul>
               <div className="hidden xl:flex items-center space-x-5 items-center">
                 <a className={`hover:${styles.filterWhite}`} href="https://github.com/JulesBobeuf" target="_blank">
-                  <img src="/navbar/github.svg" className={`h-6 w-6 ${styles.filterWhite}`}/>
+                  <img src={process.env.GITHUB_ICON ? process.env.GITHUB_ICON : "/icons/github.svg"} className={`h-6 w-6 ${styles.filterWhite}`}/>
                 </a>
                 <a className={`hover:${styles.filterWhite}`} href="https://www.linkedin.com/in/bobeuf-jules/" target="_blank">
-                  <img src="/navbar/linkedin.svg" className={`h-6 w-6 ${styles.filterWhite}`}/>
-                </a>
-                <a className={`hover:${styles.filterWhite}`} href="#" target="_blank">
-                  <img src="/navbar/github.svg" className={`h-6 w-6 ${styles.filterWhite}`}/>
+                  <img src={process.env.LINKEDIN_ICON ? process.env.LINKEDIN_ICON : "/icons/linkedin.svg"} className={`h-6 w-6 ${styles.filterWhite}`}/>
                 </a>
               </div>
             </div>
@@ -41,4 +38,4 @@ const Navbar = () => {
   );
 };
 
-export default Navbar;
+export default navbar;
