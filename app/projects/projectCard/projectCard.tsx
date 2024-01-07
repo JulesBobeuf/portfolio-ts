@@ -20,7 +20,7 @@ const projectCard = (prop: { title: string; desc:string; imgUrl: string; href: s
                 </div>
                 <div className="px-6 pt-4 pb-2">
                     {prop.technos.map((techno: string) => (
-                        <span className="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2">{techno}</span>
+                        <span className="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2" key={techno}>{techno}</span>
                     ))}
                 </div>
             </div>

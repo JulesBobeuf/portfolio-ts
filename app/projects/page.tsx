@@ -9,7 +9,7 @@ export default function Home() {
                 <div className="grid grid-cols-4 gap-4 my-8">
                     {
                         listPropProjectCard.map((prop: propProjectCard) => (
-                                <ProjectCard title={prop.title} desc={prop.desc} imgUrl={prop.imgUrl} href={prop.href} 
+                                <ProjectCard key={prop.title} title={prop.title} desc={prop.desc} imgUrl={prop.imgUrl} href={prop.href} 
                                 technos={prop.technos}></ProjectCard>
                         ))
                     }
