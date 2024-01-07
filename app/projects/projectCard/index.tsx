@@ -1,0 +1,1 @@
+export { default as projectCard } from "./projectCard";
