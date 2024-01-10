@@ -4,11 +4,11 @@
     align-items: center;
 	width: 75%;
 	height: 7rem;
-    background: rgb(248, 237, 225);
+    background: rgb(23, 1, 101);
 
-    box-shadow: 0.3rem 0.2rem 0.5rem 0.1rem var(--shadow-color);
-    -moz-box-shadow: 0.3rem 0.2rem 0.5rem 0.1rem var(--shadow-color);
-    -webkit-box-shadow: 0.3rem 0.2rem 0.5rem 0.1rem var(--shadow-color);
+    box-shadow: 0.3rem 0.2rem 0.5rem 0.1rem rgba(86, 86, 86, 0.5);
+    -moz-box-shadow: 0.3rem 0.2rem 0.5rem 0.1rem rgba(86, 86, 86, 0.5);
+    -webkit-box-shadow: 0.3rem 0.2rem 0.5rem 0.1rem rgba(86, 86, 86, 0.5);
 
     margin-top: 3.5rem;
     margin-bottom: 3.5rem;
@@ -17,6 +17,8 @@
 
     display: grid;
     grid-template-columns: repeat(4, 1fr);
+
+    border-radius: 4px;
 }
 
 .inRectangle {
@@ -28,6 +30,18 @@
     padding: 1rem;
     max-height: 30%;
     max-width: 60%;
+}
+
+.filterWhite {
+    filter: invert(99%);
+}
+
+.filterGray {
+    filter: invert(50%);
+}
+
+.h1 {
+    font-size: large;
 }
 
 @media(max-width: 950px){
