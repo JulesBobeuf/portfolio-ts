@@ -64,6 +64,14 @@ const listPropProjectCard: PropProjectCard[] = [
     },
 
     {
+        title: "Weather app",
+        desc: "Development of a website that displays atmospheric data through an API.",
+        imgUrl: "/projects/projectCard/msi.png",
+        href: "weatherapp" ,
+        technos: ["Python","Flask","HTML", "CSS"]
+    },
+
+    {
         title: "Stock / Sales management Application",
         desc: "Creation of a stock / sales management app.",
         imgUrl: "/projects/projectCard/nekleo.png",
@@ -80,20 +88,12 @@ const listPropProjectCard: PropProjectCard[] = [
     },
 
     {
-        title: "Fractals Generation",
-        desc:"Created an application that generates fractals.",
-        imgUrl: "/projects/projectCard/fractals.jpg",
-        href: "fractals" ,
-        technos: ["Java","Gradle","Bash"]
+        title: "My first website",
+        desc: "Created a showcase website for an event company.",
+        imgUrl: "/projects/projectCard/websitehomepage.png",
+        href: "firstwebsite" ,
+        technos: ["HTML","CSS"]
     },
-
-    {
-        title: "Fractals Generation",
-        desc:"Created an application that generates fractals.",
-        imgUrl: "/projects/projectCard/fractals.jpg",
-        href: "fractals" ,
-        technos: ["Java","Gradle","Bash"]
-    }
 ]
 
 export const listPropProjectArticle: PropProjectArticle[] = [
@@ -184,6 +184,27 @@ export const listPropProjectArticle: PropProjectArticle[] = [
     },
 
     {
+        title: "Weather app",
+        projectType: "University Project",
+        nbContributors: "3",
+        endDate: "7/11/2022",
+        codeLink: "https://github.com/JulesBobeuf/weather-app",
+        image1: "/projects/projectArticle/MSIDiagram.jpg",
+        image2: "/projects/projectArticle/msi.jpg",
+        subtitle1: "Context",
+        subtitle2: "Retrieving and displaying data",
+        subtitle3: "Final Result",
+        text1: "Thomas Santoro, Aymeric Jakobowski and I developed a web application that displays atmospheric data for a selected town. The goal was to collect the data, to store them in a SQLite database and to display them through texts and graphics. In order to do that, we used Flash, a Python Framework.",
+        text2: "The first thing we needed to do was to collect the data. For that, we used an API called wttr. (http://wttr.in) We received the data in a list, which after treatment, was sent into the database to store the informations. We fully coded the database with Python. We developed functions that would create and delete the tables, that would insert data, or that would retrieve it. In order to do this, we first thought about how the database would work, before writing the Python code. In order to display the data, we first had to get it from the database. In order to do that, we used SQL queries that were adapted to what the user wanted. We then used HTML templates with a bit of CSS to display it nicely onto the website. For the graphics, we mainly used Matploblib, a python module. To have a user-friendly app, we made the data collect automatic. Indeed, if the program is online, it will automatically retrieve the data for all requested towns every hour, and will store the queries it executes into a logger. This logger allows us to easily keep track about what the program does. It's also a help to find potential problems the application could have to retrieve the data.",
+        text3: "As said earlier, the application takes care about everything that's related to its back-end. All the user needs to do is to go on the website and to enter the town he wants to retrieve the data for and a time span. Then, the app will load a new template and will show the retrieved data.",
+        listContributors: [
+            {name: "Aymeric Jakobowski", website: "Linkedin", link: "https://www.linkedin.com/in/aymeric-jakobowski/"},
+            {name: "Thomas Santoro", website: "Linkedin", link: "https://www.linkedin.com/in/thomas-santoro/"}
+        ],
+        href: "weatherapp",
+    },
+
+    {
         title: "Creation of a stock / sales management app.",
         projectType: "University Project",
         nbContributors: "4",
@@ -221,6 +242,27 @@ export const listPropProjectArticle: PropProjectArticle[] = [
         text3: "The bot was hosted on a cloud and later on my Raspberry PI. I did not get to use it much, but it still was a great project to work on as it taught me a lot of things. Those ranging from the use of 'async' and 'await' in Python to the use a database in a programming language. I later on learnt those topics at university, and it felt relatively easy for me compared to my classmates as I had already experienced the topics throughout this project.",
         listContributors: [],
         href: "discordbot",
+    },
+
+    {
+        title: "My first website",
+        projectType: "University Project",
+        nbContributors: "3",
+        endDate: "10/01/2022",
+        codeLink: "https://github.com/JulesBobeuf/EventWebsite",
+        image1: "/projects/projectArticle/epee2bois.png",
+        image2: "/projects/projectArticle/epee2bois2.png",
+        subtitle1: "Subject",
+        subtitle2: "The making",
+        subtitle3: "Final Result",
+        text1: "We had to create an event organizer company and to make its website. Logically i'll focus more on the HTML/CSS part as it was my job. Besides that, we had to evaluate nearby market, to find a company name, to draw the logo, to create a graphic chart and so on. We deciced to create an escape game company, which would be specialized in creating completely new escape game for the customers. We also decided to focus mainly in fantasy theme, as it is a fascinating thing to create escape games based on movies, books or on just our thoughts.",
+        text2: "Due to the short amount of time we had and the lack of skills we owned, the website could not look as catchy as most of your favorite websites. We also did not learn anything JS nor PHP which limited our options. We had to do it fully in HMTL/CSS. Our website had most likely 2 designs : we had the homepage which was really different from the others. It needed to hit on customers's eyes and to convinced them to buy our product. We opted for a background picture and a few catchy sentences to present our other pages. On the other side, the other pages were quite simple, mainly being purple with text to communicate with our potential customers, while of course following our graphic chart. ",
+        text3: "We logically had a quite simple website, but did we really need more? We had 6 pages : The homepage, the contact form, the products page, the about us page and the price page. Our website was fully responsive and comported a navigation bar, a footer and obviously content. It was a really important project for me as it made me like programming website as it was an obscure world for me before. Thanks to my friends, I received many tips that made me improve a lot and which grew my HTML/CSS a few steps ahead. I am really proud of this first Computer science-related project, as I will for sure build more websites, whenever I will get the opportunity.",
+        listContributors: [
+            {name: "Elsa Logier", website: "Linkedin", link: "https://www.linkedin.com/in/elsa-logier-2bb692254/"},
+            {name: "Thomas Santoro", website: "Linkedin", link: "https://www.linkedin.com/in/thomas-santoro/"}
+        ],
+        href: "firstwebsite",
     },
 ]
 export default listPropProjectCard
