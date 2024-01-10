@@ -70,15 +70,18 @@ const projectArticle = (prop: {
             <h2 className="text-2xl m-4">{prop.projectArticle.subtitle3}</h2>
             <p>{prop.projectArticle.text3}</p>
           </div>
-
-          <div className="text-center p-4">
-            <h2 className="p-4 text-2xl">Contributors</h2>
-            <ul>
-              {prop.projectArticle.listContributors.map((c: Contributor) => (
-                  <li key={c.name}>{c.name} : <a href={c.link} className="p-2 text-white underline" target="_blank">{c.website}</a></li>
-              ))}
-            </ul>
-          </div>
+          {prop.projectArticle.listContributors.length > 0 ? 
+            <>
+              <div className="text-center p-4">
+              <h2 className="p-4 text-2xl">Contributors</h2>
+              <ul>
+                {prop.projectArticle.listContributors.map((c: Contributor) => (
+                    <li key={c.name}>{c.name} : <a href={c.link} className="p-2 text-white underline" target="_blank">{c.website}</a></li>
+                ))}
+              </ul>
+              </div> 
+            </> 
+          : <></> }
         </div>
       </div>
     </>
