@@ -56,27 +56,27 @@ const listPropProjectCard: PropProjectCard[] = [
     },
 
     {
-        title: "Fractals Generation",
-        desc:"Created an application that generates fractals.",
-        imgUrl: "/projects/projectCard/fractals.jpg",
-        href: "fractals" ,
-        technos: ["Java","Gradle","Bash"]
+        title: "La Toile",
+        desc: "Programmed a website within 2 days that displays an art gallery.",
+        imgUrl: "/projects/projectCard/marathonLogo.png",
+        href: "marathon" ,
+        technos: ["PHP","Laravel","HTML", "CSS"]
     },
 
     {
-        title: "Fractals Generation",
-        desc:"Created an application that generates fractals.",
-        imgUrl: "/projects/projectCard/fractals.jpg",
-        href: "fractals" ,
-        technos: ["Java","Gradle","Bash"]
+        title: "Stock / Sales management Application",
+        desc: "Creation of a stock / sales management app.",
+        imgUrl: "/projects/projectCard/nekleo.png",
+        href: "stocksales" ,
+        technos: ["Java","JavaFX"]
     },
 
     {
-        title: "Fractals Generation",
-        desc:"Created an application that generates fractals.",
-        imgUrl: "/projects/projectCard/fractals.jpg",
-        href: "fractals" ,
-        technos: ["Java","Gradle","Bash"]
+        title: "Discord bot",
+        desc: "Development of a Discord bot that handles community events.",
+        imgUrl: "/projects/projectCard/vlrs.png",
+        href: "discordbot" ,
+        technos: ["Python","PostgreSQL"]
     },
 
     {
@@ -156,6 +156,71 @@ export const listPropProjectArticle: PropProjectArticle[] = [
         text3: "I now have a Fruit Ninja game that works on all platforms thanks to Unity! It possesses all basics features: a score and a high score, a menu, multiple fruits that all give a different number of points... This project was a really fun one to work on. It taught me a lot about Unity and C#, and definitely makes me want to do more projects.", 
         listContributors: [],
         href: "fruitninja",
-    }
+    },
+
+    {
+        title: "La Toile",
+        projectType: "University Project",
+        nbContributors: "7",
+        endDate: "16/12/2022",
+        codeLink: "https://github.com/JulesBobeuf/Marathon",
+        image1: "/projects/projectArticle/marathonHomepage.png",
+        image2: "/projects/projectArticle/marathonPage2.png",
+        subtitle1: "Context",
+        subtitle2: "Back-end & Design",
+        subtitle3: "Final Result",
+        text1: "For our PHP Exams, we were coupled with a group of multimedia students to make a website within 34 hours. The default theme was 'Numerical Art', so we chose 'French Numerical Art' for our website. We had to think about everything: The logo, the front/back-end... Our team was made of Aymeric Jakobowski, Thomas Santoro, Clara Amador, Julien Fischer, Louis Legry, Alexandre Feraud and myself.",
+        text2: "We, IT Students, started with back-end obviously. We created the CRUD of our canvas and made every feature we were asked to do, like sorting the canvas, the authors, allowing the logged in users to like canvas and so on. Furthermore, every logged in user can leave comments under canvas, and even post theirs in the community room. For the design part, we decided to go fully in and make it obvious that our website was primary destined to the French audience: Our logo contains the French flag in it, and we based our website on the French metro. Indeed, when you get on the homepage, you can see a metro that moves forward, and when you click on 'visit the exhibition' you get to see that metro a bit bigger as well as a few metro stops which lead to a themed room of our exhibition, just like 3D, or AI.",
+        text3: "Thanks to the Multimedia team, we got a working website which looks great and contains a beautiful art gallery that follows the themes given. The website was not polished as we only had 34 hours, but the functionalities are there and the core of the design as well. Compared to some other groups, I'm convinced that we did a great job. To finish, I would like to thank my six team mates as it was really hard but we managed to pull through, and I am so proud of the final product.",
+        listContributors: [
+            {name: "Aymeric Jakobowski", website: "Linkedin", link: "https://www.linkedin.com/in/aymeric-jakobowski/"},
+            {name: "Thomas Santoro", website: "Linkedin", link: "https://www.linkedin.com/in/thomas-santoro/"},
+            {name: "Julien Fischer", website: "Linkedin", link: "https://www.linkedin.com/in/julienfischer777/"},
+            {name: "Clara Amador", website: "Linkedin", link: "https://www.linkedin.com/in/clara-amador-490a91237/"},
+            {name: "Louis Legry", website: "Linkedin", link: "https://www.linkedin.com/in/louis-legry-426436239/"},
+            {name: "Alexandre Feraud", website: "Linkedin", link: "https://www.linkedin.com/in/alexandre-feraud-a81893143/"},
+        ],
+        href: "marathon",
+    },
+
+    {
+        title: "Creation of a stock / sales management app.",
+        projectType: "University Project",
+        nbContributors: "4",
+        endDate: "17/06/2022",
+        codeLink: "https://github.com/JulesBobeuf/SalesManagement/",
+        image1: "/projects/projectArticle/appgvconsole.png",
+        image2: "/projects/projectArticle/appgvhomepage.png",
+        subtitle1: "Context",
+        subtitle2: "Transformation into a GUI",
+        subtitle3: "How it works?",
+        text1: "Thomas Santoro, Aymeric Jakobowski, Pierre Shreiner and I had to develop a management/sales app that would be suitable for a company. There were four different big parts to do: The clients, articles and stocks parts first, then the lists to keep track of the cart of the buyer. I mainly worked on the last three parts with the help of Pierre Shreiner, one of my mates. The other two, Thomas Santoro and Aymeric Jakobowski, worked on the Client part as well as some management class assignment we had to do.",
+        text2: "At this point, we had a console app, but it was not very user friendly. We then logically had to transform it into a Graphic User Interface to improve that. There were multiple views that were all linked together. With the help of buttons and listboxes, we managed to display all the required data and functionalities we programmed earlier.",
+        text3: "When you launch the application, you will find yourself in front of a GUI that will let you select which part you would like to access: clients, stocks... Afterwards, you will have menus that will open up, which will let you choose whether if you want to see the current data, if you want to add, update or delete data and so on. You could also select how you would want the data to be sorted. As a whole, the app is quite complete, especially for first year students.",
+        listContributors: [
+            {name: "Aymeric Jakobowski", website: "Linkedin", link: "https://www.linkedin.com/in/aymeric-jakobowski/"},
+            {name: "Thomas Santoro", website: "Linkedin", link: "https://www.linkedin.com/in/thomas-santoro/"},
+            {name: "Pierre Shreiner", website: "Linkedin", link: "https://www.linkedin.com/in/pierre-schreiner/"}
+        ],
+        href: "stocksales",
+    },
+
+    {
+        title: "Discord bot",
+        projectType: "Personal Project",
+        nbContributors: "1",
+        endDate: "16/2/2022",
+        codeLink: "https://github.com/JulesBobeuf/VLRSBot/",
+        image1: "/projects/projectArticle/vlrs.png",
+        image2: "/projects/projectArticle/vlrslb.png",
+        subtitle1: "Context & Working environment",
+        subtitle2: "Functionalities",
+        subtitle3: "Epilogue",
+        text1: "During my first year at university, I had learnt Python and PostgreSQL. While I was in holidays, I wanted to experience a bit and to use what I had learnt at school on a real project. In order to do this project, I had to familiarize myself with the 'psycopg2' python library for the database as well as the 'py-cord' library for discord. The project was not long in itself but it took me a very long time to get each functionality working as there was a lot of bugs related to Python and the database.",
+        text2: "The bot's use was to add a currency to a server which you could earn by winning community events. Staff members would give the currency to whichever user won the event with a private command. After earning a good amount, the users could purchase perks within the discord server.",
+        text3: "The bot was hosted on a cloud and later on my Raspberry PI. I did not get to use it much, but it still was a great project to work on as it taught me a lot of things. Those ranging from the use of 'async' and 'await' in Python to the use a database in a programming language. I later on learnt those topics at university, and it felt relatively easy for me compared to my classmates as I had already experienced the topics throughout this project.",
+        listContributors: [],
+        href: "discordbot",
+    },
 ]
 export default listPropProjectCard
