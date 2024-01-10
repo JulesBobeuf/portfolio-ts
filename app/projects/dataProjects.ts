@@ -1,4 +1,4 @@
-export interface propProjectCard {
+export interface PropProjectCard {
     title: string; 
     desc:string; 
     imgUrl: string; 
@@ -6,7 +6,7 @@ export interface propProjectCard {
     technos: string[];
 }
 
-const listPropProjectCard: propProjectCard[] = [
+const listPropProjectCard: PropProjectCard[] = [
     {
         title: "Fractals Generation",
         desc:"Created an application that generates fractals.",
