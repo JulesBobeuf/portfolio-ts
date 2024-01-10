@@ -7,7 +7,7 @@ const projectArticle = (prop: {
 }) => {
   return (
     <>
-      <div className={styles.rectangle + " flex flex-wrap place-items-center"}>
+      <div className={`${styles.rectangle} flex flex-wrap place-items-center`}>
         <div className={styles.inRectangle}>
           <p>Type :</p>
           <p>{prop.projectArticle.projectType}</p>
@@ -20,7 +20,7 @@ const projectArticle = (prop: {
           <p>End date :</p>
           <p> {prop.projectArticle.endDate}</p>
         </div>
-        <div className={styles.inRectangle + " flex flex-col place-items-center"}>
+        <div className={`${styles.inRectangle} flex flex-col place-items-center`}>
           <p>Project Link :</p>
           <a href={prop.projectArticle.codeLink} target="_blank">
             <img src={ process.env.GITHUB_ICON ? process.env.GITHUB_ICON : "/icons/github.svg"} 

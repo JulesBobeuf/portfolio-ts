@@ -5,7 +5,7 @@ import styles from "./navbar.module.css";
 const navbar = () => {
   return (
     <>
-      <div className="flex flex-wrap place-items-center">
+      <div className="flex flex-wrap place-items-center overflow-hidden">
         <section className="relative mx-auto">
           <nav className="flex justify-between text-white w-screen">
             <div className="px-5 xl:px-12 py-6 flex w-full items-center">
