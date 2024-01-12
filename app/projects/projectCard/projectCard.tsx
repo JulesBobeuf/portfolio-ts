@@ -6,7 +6,7 @@ import { PropProjectCard } from "../dataProjects";
 const projectCard = (prop: { projectCard: PropProjectCard}) => {
   return (
     <>            
-        <Link href={`/projects/${prop.projectCard.href}`}>
+        <Link href={`/projects/${prop.projectCard.href}`} className="my-4">
             <div className={`${styles.card} max-w-sm bg-gray-800 rounded overflow-hidden shadow-lg`}>
                 <Image
                     width="60"

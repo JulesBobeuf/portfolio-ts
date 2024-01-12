@@ -50,7 +50,7 @@ const listPropProjectCard: PropProjectCard[] = [
     {
         title: "Fruit Ninja",
         desc: "Fruit ninja clone that is adapted to most operating systems.",
-        imgUrl: "/projects/projectArticle/fruitNinja.png",
+        imgUrl: "/projects/projectCard/fruitNinja.png",
         href: "fruitninja" ,
         technos: ["C#","Unity"]
     },

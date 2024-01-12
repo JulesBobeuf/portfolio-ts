@@ -5,3 +5,10 @@
 .filterGray {
     filter: invert(50%);
 }
+.navlink {
+    color: white;
+}
+.navlink:hover {
+    transform: .75s;
+    color: rgb(14, 110, 255);
+}
