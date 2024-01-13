@@ -8,13 +8,13 @@ const projectCard = (prop: { projectCard: PropProjectCard}) => {
     <>            
         <Link href={`/projects/${prop.projectCard.href}`} className="my-4">
             <div className={`${styles.card} max-w-sm bg-gray-800 rounded overflow-hidden shadow-lg`}>
-                <Image
-                    width="60"
-                    height="40"
-                    src={prop.projectCard.imgUrl} 
-                    alt={prop.projectCard.title}
-                    className="w-full max-h-40"
-                />
+                <div className={styles.imgcontainer}>
+                    <Image
+                        src={prop.projectCard.img} 
+                        alt={prop.projectCard.title}
+                        fill
+                    />
+                </div>
                 <div className="px-6 py-4">
                     <div className="font-bold text-xl mb-2">{prop.projectCard.title}</div>
                     <p className="text-white text-base">{prop.projectCard.desc}</p>

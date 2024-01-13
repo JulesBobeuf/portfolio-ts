@@ -8,3 +8,22 @@
     -webkit-transform: scale(1.05); /* Safari 3-8 */
     transform: scale(1.05); 
 }
+
+.imgcontainer {
+    width: 100%;
+    height: 30vh;
+    display: flex;
+    position: relative;
+}
+
+@media(min-width: 768px){
+    .imgcontainer {
+        height: 25vh;
+    }
+}
+
+@media(min-width: 1240px){
+    .imgcontainer {
+        height: 20vh;
+    }
+}
