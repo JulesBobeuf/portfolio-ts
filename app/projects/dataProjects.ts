@@ -1,7 +1,17 @@
+import { StaticImageData } from "next/image";
+import imgSpaceInvaders from "/public/projects/projectCard/SpaceInvaders.png"
+import imgfractals from "/public/projects/projectCard/fractals.jpg"
+import imgfruitNinja from "/public/projects/projectCard/fruitNinja.png"
+import imgMarathon from "/public/projects/projectCard/marathonLogo.png"
+import imgMsi from "/public/projects/projectCard/msi.png"
+import imgNekleo from "/public/projects/projectCard/nekleo.png"
+import imgVlrs from "/public/projects/projectCard/vlrs.png"
+import imgFirstWebsite from "/public/projects/projectCard/epee2bois.png"
+
 export interface PropProjectCard {
     title: string; 
     desc:string; 
-    imgUrl: string; 
+    img: StaticImageData; 
     href: string; 
     technos: string[];
 }
@@ -34,7 +44,7 @@ const listPropProjectCard: PropProjectCard[] = [
     {
         title: "Space Invaders Game",
         desc: "Made a space invaders game with multiple game levels.",
-        imgUrl: "/projects/projectCard/SpaceInvaders.png",
+        img: imgSpaceInvaders,
         href: "spaceinvaders",
         technos: ["Java","JavaFX","Gradle"]
     },
@@ -42,7 +52,7 @@ const listPropProjectCard: PropProjectCard[] = [
     {
         title: "Fractals Generation",
         desc:"Created an application that generates fractals.",
-        imgUrl: "/projects/projectCard/fractals.jpg",
+        img: imgfractals,
         href: "fractals" ,
         technos: ["Java","Gradle","Bash"]
     },
@@ -50,7 +60,7 @@ const listPropProjectCard: PropProjectCard[] = [
     {
         title: "Fruit Ninja",
         desc: "Fruit ninja clone that is adapted to most operating systems.",
-        imgUrl: "/projects/projectCard/fruitNinja.png",
+        img: imgfruitNinja,
         href: "fruitninja" ,
         technos: ["C#","Unity"]
     },
@@ -58,7 +68,7 @@ const listPropProjectCard: PropProjectCard[] = [
     {
         title: "La Toile",
         desc: "Programmed a website within 2 days that displays an art gallery.",
-        imgUrl: "/projects/projectCard/marathonLogo.png",
+        img: imgMarathon,
         href: "marathon" ,
         technos: ["PHP","Laravel","HTML", "CSS"]
     },
@@ -66,7 +76,7 @@ const listPropProjectCard: PropProjectCard[] = [
     {
         title: "Weather app",
         desc: "Development of a website that displays atmospheric data through an API.",
-        imgUrl: "/projects/projectCard/msi.png",
+        img: imgMsi,
         href: "weatherapp" ,
         technos: ["Python","Flask","HTML", "CSS"]
     },
@@ -74,7 +84,7 @@ const listPropProjectCard: PropProjectCard[] = [
     {
         title: "Stock / Sales management Application",
         desc: "Creation of a stock / sales management app.",
-        imgUrl: "/projects/projectCard/nekleo.png",
+        img: imgNekleo,
         href: "stocksales" ,
         technos: ["Java","JavaFX"]
     },
@@ -82,7 +92,7 @@ const listPropProjectCard: PropProjectCard[] = [
     {
         title: "Discord bot",
         desc: "Development of a Discord bot that handles community events.",
-        imgUrl: "/projects/projectCard/vlrs.png",
+        img: imgVlrs,
         href: "discordbot" ,
         technos: ["Python","PostgreSQL"]
     },
@@ -90,8 +100,8 @@ const listPropProjectCard: PropProjectCard[] = [
     {
         title: "My first website",
         desc: "Created a showcase website for an event company.",
-        imgUrl: "/projects/projectCard/websitehomepage.png",
-        href: "firstwebsite" ,
+        img: imgFirstWebsite,
+        href: "firstwebsite",
         technos: ["HTML","CSS"]
     },
 ]
