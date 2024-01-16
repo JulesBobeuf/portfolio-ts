@@ -32,7 +32,7 @@ const projectArticle = (prop: {
         <div className={styles.colortest}>
           <h1 className="text-4xl text-center p-4">{prop.projectArticle.title}</h1>
 
-          <div className="text-justify p-4">
+          <div className="text-justify py-4">
             <h2 className="text-2xl text-center m-4">{prop.projectArticle.subtitle1}</h2>
             <p>{prop.projectArticle.text1}</p>
           </div>
@@ -49,7 +49,7 @@ const projectArticle = (prop: {
               />
           </div>
 
-          <div className="text-justify p-4">
+          <div className="text-justify py-4">
             <h2 className="text-2xl text-center m-4">{prop.projectArticle.subtitle2}</h2>
             <p>{prop.projectArticle.text2}</p>
           </div>
@@ -66,7 +66,7 @@ const projectArticle = (prop: {
               />
           </div>
 
-          <div className="text-justify p-4">
+          <div className="text-justify py-4">
             <h2 className="text-2xl text-center m-4">{prop.projectArticle.subtitle3}</h2>
             <p>{prop.projectArticle.text3}</p>
           </div>
