@@ -44,6 +44,11 @@
     font-size: large;
 }
 
+.projectsContent{      
+    padding-left: 2rem;
+    padding-right: 2rem;
+}
+
 @media(max-width: 950px){
     .rectangle {
         padding-left: 1rem;
@@ -67,8 +72,8 @@
 
 @media(max-width: 768px) {
     .projectsContent{      
-        padding-left: 2rem;
-        padding-right: 2rem;
+        padding-left: 0.25rem;
+        padding-right: 0.25rem;
     }
 
     .imgprojects {
