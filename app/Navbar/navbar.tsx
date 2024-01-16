@@ -5,7 +5,7 @@ import { Avatar } from "../Avatar";
 import styles from "./navbar.module.css";
 import { useState } from "react";
 
-const navbar = () => {
+const Navbar = () => {
   const [isMenuOpen, setMenuOpen] = useState(false);
 
   const toggleMenu = () => {
@@ -82,4 +82,4 @@ const navbar = () => {
   );
 };
 
-export default navbar;
+export default Navbar;
