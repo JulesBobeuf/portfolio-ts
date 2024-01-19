@@ -1,0 +1,45 @@
+.link {
+    text-decoration: underline;
+}
+
+.link:hover {
+    transform: .75s;
+    color: rgb(14, 110, 255);
+}
+
+.main {
+    text-align: center;
+    justify-content: center;
+    margin: 1rem;
+}
+
+.title {
+    font-size: 2.5rem;
+    margin: 2rem 0;
+}
+
+.subtitle {
+    font-size: 1.5rem;
+    margin: 1.5rem 0;
+}
+
+.text {
+    margin: 0.5rem 0;
+}
+
+.btn{
+    position: relative;
+    display: inline-block;
+    padding: 0.75em 1.5em;
+    margin-top: 1rem;
+    overflow: hidden;
+    border-radius: 3rem;
+    border: 2px solid #9A9A9A;
+    transition: background 1s;
+    color: white !important;
+    background-color: #170165;
+}
+    
+.btn:hover {
+    background: var(--hover-color);
+}

@@ -48,7 +48,6 @@ const projectArticle = (prop: {
                 {...{ async: true }}
               />
           </div>
-
           <div className="text-justify py-4">
             <h2 className="text-2xl text-center m-4">{prop.projectArticle.subtitle2}</h2>
             <p>{prop.projectArticle.text2}</p>
