@@ -55,14 +55,14 @@ const Navbar = () => {
                       </Link>
                     </li>
                     <li>
-                      <Link className={`${styles.navlink} p-2`} href="#">
-                        Work
-                      </Link>
-                    </li>
-                    <li>
                       <Link className={`${styles.navlink} p-2`} href="/projects">
                         Projects
                       </Link>
+                    </li>
+                    <li>
+                      <a className={`hover:${styles.filterGray} ml-2`} href="/navbar/cv_en.pdf" target="_blank" rel="noopener noreferrer">
+                        CV
+                      </a>
                     </li>
                   </ul>
                 </div>
