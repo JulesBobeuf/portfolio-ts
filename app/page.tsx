@@ -14,7 +14,7 @@ export default function Home() {
       </div>
       <div className="container text-center">
         <h2 className={styles.subtitle}>About me</h2>
-          <p className={styles.text}> Hello! My name is Jules, I'm a 19 year old French man that currently studies computer science!</p>
+          <p className={styles.text}> Hello! My name is Jules, I&apos;m a 19 year old French man that currently studies computer science!</p>
           <p className={styles.text}> On this website, you can find all the relevant information you may need about what I do in IT. However, here is a little resume of mine: </p>
           <p className={styles.text}> I graduated from high school with Mathematics and English Specialties with distinctions in 2021. </p>
           <p className={styles.text}>I also obtained my end of study certificate in music theory with honors in 2019. </p>
@@ -29,7 +29,7 @@ export default function Home() {
           <a className={styles.link} href="https://www.udemy.com/certificate/UC-07ef669a-f88b-4d13-8450-79f3513e8e51/">Ruby For Beginners</a>
           <p className={styles.text}>Udemy course about the basics of Ruby.</p>
           <a className={styles.link} href="https://pix.fr/">Pix : P-CT2W4QJF</a>
-          <p className={styles.text}>Pix is a public French service that certifies French Students' numerical skills.</p>
+          <p className={styles.text}>Pix is a public French service that certifies French Students&apos; numerical skills.</p>
 
           <hr className="my-8"></hr>
 
