@@ -11,6 +11,7 @@ const Navbar = () => {
   const toggleMenu = () => {
     setMenuOpen(!isMenuOpen);
   };
+
   return (
     <>
       <div className="flex flex-wrap place-items-center overflow-hidden">
@@ -22,7 +23,6 @@ const Navbar = () => {
               </Link>
               <ul className="hidden md:flex px-4 mx-auto font-semibold font-heading space-x-12">
                 <li><Link className={styles.navlink} href="/">About me</Link></li>
-                <li><Link className={styles.navlink} href="#">Work</Link></li>
                 <li><Link className={styles.navlink} href="/projects">Projects</Link></li>
               </ul>
               <div className="hidden md:flex mr-10 items-center space-x-5 items-center">
@@ -31,6 +31,9 @@ const Navbar = () => {
                 </a>
                 <a className={`hover:${styles.filterGray}`} href="https://www.linkedin.com/in/bobeuf-jules/" target="_blank">
                   <img src={process.env.LINKEDIN_ICON ? process.env.LINKEDIN_ICON : "/icons/linkedin.svg"} className={`h-6 w-6 ${styles.filterWhite}`}/>
+                </a>
+                <a className={`hover:${styles.filterGray}`} href="/navbar/cv_en.pdf" target="_blank" rel="noopener noreferrer">
+                  CV
                 </a>
               </div>
             </div>
