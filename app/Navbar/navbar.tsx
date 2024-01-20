@@ -37,7 +37,7 @@ const Navbar = () => {
                 </a>
               </div>
             </div>
-            <a className="navbar-burger self-center mr-8 md:hidden" href="#" onClick={toggleMenu}>
+            <a className="navbar-burger self-center mr-8 md:hidden" href="#" onClick={toggleMenu} aria-label="Mobile Navbar">
                 <svg xmlns="" className="h-6 w-6 hover:text-gray-200" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M4 6h16M4 12h16M4 18h16" />
                 </svg>
