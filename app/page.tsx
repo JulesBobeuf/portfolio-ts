@@ -35,7 +35,7 @@ export default function Home() {
 
           <h2 className={styles.subtitle}>Projects</h2>
           <p className={styles.text}>Want to see my projects? Please head to the projects page!</p>
-          <button className={styles.btn}><Link className={styles.navlink} href="/projects">Projects</Link></button>
+          <button className={styles.btn}><Link className={styles.navlink} href="/projects" aria-label="Projects">Projects</Link></button>
           
           <hr className="my-8"></hr>
           

@@ -18,21 +18,21 @@ const Navbar = () => {
         <section className="relative mx-auto">
           <nav className="flex justify-between text-white w-screen">
             <div className="px-5 xl:px-12 py-6 flex w-full items-center">
-              <Link className="text-3xl font-bold font-heading" href="/">
+              <Link className="text-3xl font-bold font-heading" href="/" aria-label="Home">
                 <Avatar size={process.env.NAVBAR_AVATAR_SIZE? +process.env.NAVBAR_AVATAR_SIZE : 64} src={process.env.NAVBAR_AVATAR_URL ? process.env.NAVBAR_AVATAR_URL : "/avatar/choix.jpg"}/>
               </Link>
               <ul className="hidden md:flex px-4 mx-auto font-semibold font-heading space-x-12">
-                <li><Link className={styles.navlink} href="/">About me</Link></li>
-                <li><Link className={styles.navlink} href="/projects">Projects</Link></li>
+                <li><Link className={styles.navlink} href="/" aria-label="About me">About me</Link></li>
+                <li><Link className={styles.navlink} href="/projects" aria-label="Projects">Projects</Link></li>
               </ul>
               <div className="hidden md:flex mr-10 items-center space-x-5 items-center">
-                <a className={`hover:${styles.filterGray}`} href="https://github.com/JulesBobeuf" target="_blank">
-                  <img src={process.env.GITHUB_ICON ? process.env.GITHUB_ICON : "/icons/github.svg"} className={`h-6 w-6 ${styles.filterWhite}`}/>
+                <a className={`hover:${styles.filterGray}`} href="https://github.com/JulesBobeuf" target="_blank" aria-label="GitHub">
+                  <img src={process.env.GITHUB_ICON ? process.env.GITHUB_ICON : "/icons/github.svg"} className={`h-6 w-6 ${styles.filterWhite}`} alt="GitHub"/>
                 </a>
-                <a className={`hover:${styles.filterGray}`} href="https://www.linkedin.com/in/bobeuf-jules/" target="_blank">
-                  <img src={process.env.LINKEDIN_ICON ? process.env.LINKEDIN_ICON : "/icons/linkedin.svg"} className={`h-6 w-6 ${styles.filterWhite}`}/>
+                <a className={`hover:${styles.filterGray}`} href="https://www.linkedin.com/in/bobeuf-jules/" target="_blank" aria-label="LinkedIn">
+                  <img src={process.env.LINKEDIN_ICON ? process.env.LINKEDIN_ICON : "/icons/linkedin.svg"} className={`h-6 w-6 ${styles.filterWhite}`} alt="LinkedIn"/>
                 </a>
-                <a className={`hover:${styles.filterGray}`} href="/navbar/cv_en.pdf" target="_blank" rel="noopener noreferrer">
+                <a className={`hover:${styles.filterGray}`} href="/navbar/cv_en.pdf" target="_blank" rel="noopener noreferrer" aria-label="CV">
                   CV
                 </a>
               </div>
@@ -50,17 +50,17 @@ const Navbar = () => {
                 <div>
                   <ul className="block px-4 mx-auto font-semibold font-heading space-y-4">
                     <li>
-                      <Link className={`${styles.navlink} p-2`} href="/">
+                      <Link className={`${styles.navlink} p-2`} href="/" aria-label="About me">
                         About me
                       </Link>
                     </li>
                     <li>
-                      <Link className={`${styles.navlink} p-2`} href="/projects">
+                      <Link className={`${styles.navlink} p-2`} href="/projects" aria-label="Projects">
                         Projects
                       </Link>
                     </li>
                     <li>
-                      <a className={`hover:${styles.filterGray} ml-2`} href="/navbar/cv_en.pdf" target="_blank" rel="noopener noreferrer">
+                      <a className={`hover:${styles.filterGray} ml-2`} href="/navbar/cv_en.pdf" target="_blank" aria-label="CV" rel="noopener noreferrer">
                         CV
                       </a>
                     </li>
@@ -68,11 +68,11 @@ const Navbar = () => {
                 </div>
                 <div className="flex flex-row justify-end">
                   <ul className="mr-8">
-                    <a className={`hover:${styles.filterGray} m-4`} href="https://github.com/JulesBobeuf" target="_blank">
-                      <img src={process.env.GITHUB_ICON ? process.env.GITHUB_ICON : "/icons/github.svg"} className={`h-6 w-6 ${styles.filterWhite}`}/>
+                    <a className={`hover:${styles.filterGray} m-4`} href="https://github.com/JulesBobeuf" target="_blank" aria-label="GitHub">
+                      <img src={process.env.GITHUB_ICON ? process.env.GITHUB_ICON : "/icons/github.svg"} className={`h-6 w-6 ${styles.filterWhite}`} alt="GitHub"/>
                     </a>
-                    <a className={`hover:${styles.filterGray} m-4`} href="https://www.linkedin.com/in/bobeuf-jules/" target="_blank">
-                      <img src={process.env.LINKEDIN_ICON ? process.env.LINKEDIN_ICON : "/icons/linkedin.svg"} className={`h-6 w-6 ${styles.filterWhite}`}/>
+                    <a className={`hover:${styles.filterGray} m-4`} href="https://www.linkedin.com/in/bobeuf-jules/" target="_blank" aria-label="LinkedIn">
+                      <img src={process.env.LINKEDIN_ICON ? process.env.LINKEDIN_ICON : "/icons/linkedin.svg"} className={`h-6 w-6 ${styles.filterWhite}`} alt="LinkedIn"/>
                     </a>
                   </ul>
                 </div>

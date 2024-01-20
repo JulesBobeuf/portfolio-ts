@@ -6,13 +6,14 @@ import { PropProjectCard } from "../dataProjects";
 const projectCard = (prop: { projectCard: PropProjectCard}) => {
   return (
     <>            
-        <Link href={`/projects/${prop.projectCard.href}`} className="my-4">
+        <Link href={`/projects/${prop.projectCard.href}`} className="my-4" aria-label={prop.projectCard.title}>
             <div className={`${styles.card} max-w-sm bg-gray-800 rounded overflow-hidden shadow-lg`}>
                 <div className={styles.imgcontainer}>
                     <Image
                         src={prop.projectCard.img} 
                         alt={prop.projectCard.title}
                         fill
+                        loading="lazy"
                     />
                 </div>
                 <div className="px-6 py-4">

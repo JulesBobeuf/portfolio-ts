@@ -22,9 +22,9 @@ const projectArticle = (prop: {
         </div>
         <div className={`${styles.inRectangle} flex flex-col place-items-center`}>
           <p>Project Link :</p>
-          <a href={prop.projectArticle.codeLink} target="_blank">
+          <a href={prop.projectArticle.codeLink} target="_blank" aria-label="GitHub">
             <img src={ process.env.GITHUB_ICON ? process.env.GITHUB_ICON : "/icons/github.svg"} 
-                className={`h-6 w-6 ${styles.filterWhite}`}/>
+                className={`h-6 w-6 ${styles.filterWhite}`} alt="GitHub Link"/>
           </a>
         </div>
       </div>
@@ -40,12 +40,10 @@ const projectArticle = (prop: {
           <div className="flex justify-center p-4">
               <Image 
                 src={prop.projectArticle.image1} 
-                alt=""
+                alt={prop.projectArticle.title}
                 width={process.env.PROJECT_ARTICLE_IMAGE_WIDTH ? +process.env.PROJECT_ARTICLE_IMAGE_WIDTH : 400}
                 height={process.env.PROJECT_ARTICLE_IMAGE_HEIGHT ? +process.env.PROJECT_ARTICLE_IMAGE_HEIGHT : 400}
-                decoding="async"
                 loading="lazy"
-                {...{ async: true }}
               />
           </div>
           <div className="text-justify py-4">
@@ -56,12 +54,10 @@ const projectArticle = (prop: {
           <div className="flex justify-center p-4">
           <Image 
                 src={prop.projectArticle.image2} 
-                alt=""
+                alt={prop.projectArticle.title}
                 width={process.env.PROJECT_ARTICLE_IMAGE_WIDTH ? +process.env.PROJECT_ARTICLE_IMAGE_WIDTH : 400}
                 height={process.env.PROJECT_ARTICLE_IMAGE_HEIGHT ? +process.env.PROJECT_ARTICLE_IMAGE_HEIGHT : 400}
-                decoding="async"
                 loading="lazy"
-                {...{ async: true }}
               />
           </div>
 
@@ -75,7 +71,7 @@ const projectArticle = (prop: {
               <h2 className="p-4 text-2xl">Contributors</h2>
               <ul>
                 {prop.projectArticle.listContributors.map((c: Contributor) => (
-                    <li key={c.name}>{c.name} : <a href={c.link} className="p-2 text-white underline" target="_blank">{c.website}</a></li>
+                    <li key={c.name}>{c.name} : <a href={c.link} className="p-2 text-white underline" target="_blank" aria-label="LinkedIn">{c.website}</a></li>
                 ))}
               </ul>
               </div> 
