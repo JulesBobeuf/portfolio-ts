@@ -14,7 +14,7 @@ export default function Home() {
       </div>
       <div className="container text-center">
         <h2 className={styles.subtitle}>About me</h2>
-          <p className={styles.text}> Hello! My name is Jules, I&apos;m a 19 year old French man that currently studies computer science!</p>
+          <p className={styles.text}> Hello! My name is Jules, I&apos;m a 20 year old French man that currently studies computer science!</p>
           <p className={styles.text}> On this website, you can find all the relevant information you may need about what I do in IT. However, here is a little resume of mine: </p>
           <p className={styles.text}> I graduated from high school with Mathematics and English Specialties with distinctions in 2021. </p>
           <p className={styles.text}>I also obtained my end of study certificate in music theory with honors in 2019. </p>
