@@ -173,7 +173,7 @@ export const listPropProjectArticle: PropProjectArticle[] = [
         projectType: "University Project",
         nbContributors: "7",
         endDate: "16/12/2022",
-        codeLink: "https://github.com/JulesBobeuf/Marathon",
+        codeLink: "https://github.com/JulesBobeuf/LaToile",
         image1: "/projects/projectArticle/marathonHomepage.png",
         image2: "/projects/projectArticle/marathonPage2.png",
         subtitle1: "Context",
