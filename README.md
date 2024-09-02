@@ -5,4 +5,4 @@ It is not always updated as my schedule is often full. If you want the latest in
 
 url : [https://bobeuf-jules.com/](https://www.bobeuf-jules.com/)
 
-This portfolio replaces my the previous one: [https://github.com/JulesBobeuf/julesbobeuf.github.io)](https://github.com/JulesBobeuf/julesbobeuf.github.io)
+This portfolio replaces my the previous one: [https://github.com/JulesBobeuf/old-portfolio](https://github.com/JulesBobeuf/old-portfolio)
