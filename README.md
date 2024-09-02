@@ -1,7 +1,8 @@
 ## Welcome to my Portfolio!
 
 This website was made using NextJS 14 and TypeScript.
+It is not always updated as my schedule is often full. If you want the latest information about me, you can always message me!
 
-url : https://portfolio-ts.bobeuf-jules.com/
+url : [https://bobeuf-jules.com/](https://www.bobeuf-jules.com/)
 
-It may replace my original portfolio at some point : https://bobeuf-jules.com/
+This portfolio replaces my the previous one: [https://github.com/JulesBobeuf/julesbobeuf.github.io)](https://github.com/JulesBobeuf/julesbobeuf.github.io)
