@@ -40,6 +40,8 @@ export default function Home() {
           <p className={styles.text}>TOEFL is a full english test made by ETS.</p>
           <a className={styles.link} href="https://www.ets.org/toeic.html">TOEIC 970/990 (C1)</a>
           <p className={styles.text}>TOEIC is an english test made by ETS.</p>
+          <a className={styles.link} href="https://swerc.eu/2022/">SWERC 2022 (C1)</a>
+          <p className={styles.text}>SWERC is a renowned european student's contest in programming and algorithmics hosted by ICPC.</p>
           <a className={styles.link} href="https://pix.fr/">Pix : P-CT2W4QJF</a>
           <p className={styles.text}>Pix is a public French service that certifies French Students&apos; numerical skills.</p>
           
