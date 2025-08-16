@@ -14,13 +14,13 @@ const Work = () => {
                         <div className="col-span-12 space-y-12 relative px-4 sm:col-span-8 sm:space-y-8 sm:before:absolute sm:before:top-2 sm:before:bottom-0 sm:before:w-0.5 sm:before:-left-3 before:bg-gray-700">
                             <div className="flex flex-col sm:relative sm:before:absolute sm:before:top-2 sm:before:w-4 sm:before:h-4 sm:before:rounded-full sm:before:left-[-35px] sm:before:z-[1] before:bg-blue-950">
                                 <h3 className="text-xl font-semibold tracki">IBM</h3>
-                                <time className="text-xs tracki uppercase text-gray-400">July 2023 - August 2026</time>
+                                <time className="text-xs tracki uppercase text-gray-400">31st July 2023 - 31st August 2026</time>
                                 <p className="mt-3">Apprenticeship as a Java Developer</p>
                                 <p className="mt-3">Java, SpringBoot, Maven, Podman, AWS...</p>
                             </div>
                             <div className="flex flex-col sm:relative sm:before:absolute sm:before:top-2 sm:before:w-4 sm:before:h-4 sm:before:rounded-full sm:before:left-[-35px] sm:before:z-[1] before:bg-blue-950">
                                 <h3 className="text-xl font-semibold tracki">Luminess</h3>
-                                <time className="text-xs tracki uppercase text-gray-400">April 2023 - June 2023</time>
+                                <time className="text-xs tracki uppercase text-gray-400">17th April 2023 - 23rd June 2023</time>
                                 <p className="mt-3">Internship as a Python Developer</p>
                                 <p className="mt-3">Python, Django, Bootstrap, Latex...</p>
                             </div>
