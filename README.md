@@ -50,7 +50,7 @@ portfolio-ts/
 │   ├── 📁 components/  # Reusable UI components here
 │   └── 📄 page.tsx     # Homepage component file
 ├── 📁 public/          # Static assets (images, icons)
-├── 📁 utils/           # Helper functions for app
+├── 📁 utils/           # Helper functions for the app
 ├── 📄 package.json     # Project dependencies and scripts
 ```
 
