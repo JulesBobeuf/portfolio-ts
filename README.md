@@ -9,25 +9,6 @@
     <a href="https://bobeuf-jules.com/">Visit Live Site</a>
 </div>
 
-<details>
-  <summary>Table of Contents</summary>
-  <ol>
-    <li><a href="#about-the-project">About The Project</a></li>
-    <li><a href="#built-with">Built With</a></li>
-    <li><a href="#getting-started">Getting Started</a>
-      <ul>
-        <li><a href="#folder-structure">Folder Structure</a></li>
-        <li><a href="#prerequisites">Prerequisites</a></li>
-        <li><a href="#installation">Installation</a></li>
-        <li><a href="#available-scripts">Available Scripts</a></li>
-      </ul>
-    </li>
-    <li><a href="#usage">Usage</a></li>
-    <li><a href="#license">License</a></li>
-    <li><a href="#contact">Contact</a></li>
-  </ol>
-</details>
-
 ## About The Project
 
 This is my personal portfolio website. It showcases who I am, my skills and projects. It’s designed to be simple, fast, and responsive — perfect for sharing work and contact details with recruiters or collaborators.
