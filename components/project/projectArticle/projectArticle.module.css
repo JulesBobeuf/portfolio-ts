@@ -2,6 +2,7 @@
     isolation: isolate;
     align-self: center;
     align-items: center;
+    
 	width: 75%;
 	height: 7rem;
     background: rgb(23, 1, 101);
@@ -12,8 +13,8 @@
 
     margin-top: 3.5rem;
     margin-bottom: 3.5rem;
-    margin-left: 2rem;
-    margin-right: 2rem;
+    margin-left: auto;
+    margin-right: auto;
 
     display: grid;
     grid-template-columns: repeat(4, 1fr);
@@ -45,8 +46,8 @@
 }
 
 .projectsContent{      
-    padding-left: 2rem;
-    padding-right: 2rem;
+    padding-left: 7rem;
+    padding-right: 7rem;
 }
 
 @media(max-width: 950px){

@@ -1,0 +1,101 @@
+.wrapper {
+  margin: 7rem 0;
+}
+
+.title {
+  text-align: center;
+  margin-bottom: 4rem;
+}
+
+.timeline {
+  position: relative;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+/* MAIN AXIS */
+.axis {
+  position: absolute;
+  left: 50%;
+  top: 0;
+  bottom: 0;
+  width: 5px;
+  transform: translateX(-50%);
+  background: rgba(148, 163, 184, 0.25);
+  border-radius: 2px;
+}
+
+/* DURATION BAR */
+.duration {
+  position: absolute;
+  width: 4px;
+  background: rgba(99, 102, 241, 0.35);
+  border-radius: 2px;
+}
+
+.duration.left {
+  left: calc(50% - 22px);
+}
+
+.duration.right {
+  left: calc(50% + 18px);
+}
+
+/* CARD */
+.card {
+  position: absolute;
+  width: 50%;
+  transform: translateY(-50%);
+}
+
+.card.left {
+  left: 0;
+  padding-right: 60px;
+  text-align: right;
+}
+
+.card.right {
+  left: 50%;
+  padding-left: 60px;
+}
+
+/* CONNECTOR */
+.connector {
+  position: absolute;
+  top: 50%;
+  width: 34px;
+  height: 2px;
+  background: #6366f1;
+}
+
+.card.left .connector {
+  right: +22px;
+}
+
+.card.right .connector {
+  left: +22px;
+}
+
+/* CONTENT */
+.content {
+  background: rgba(15, 23, 42, 0.85);
+  padding: 1.3rem 1.6rem;
+  border-radius: 16px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.25);
+}
+
+.period {
+  display: block;
+  margin: 0.25rem 0 0.4rem;
+  font-size: 0.85rem;
+  color: #93c5fd;
+}
+
+.place {
+  font-weight: 600;
+}
+
+.desc {
+  font-size: 0.95rem;
+  color: #cbd5f5;
+}
