@@ -10,7 +10,7 @@ export default function Hero() {
           process.env.AVATAR_URL ? process.env.AVATAR_URL : "/avatar/choix.jpg"
         }
       ></Avatar>
-      <h1 className={styles.title}>Hi, I'm Jules!</h1>
+      <h1 className={styles.title}>Hi, I&apos;m Jules!</h1>
 
       <p className={styles.subtitle}>Software Engineer from France</p>
     </section>
