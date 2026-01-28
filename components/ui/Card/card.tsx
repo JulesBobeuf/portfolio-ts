@@ -1,4 +1,4 @@
-import styles from "./Card.module.css";
+import styles from "./card.module.css";
 
 type CardProps = {
   title: string;
