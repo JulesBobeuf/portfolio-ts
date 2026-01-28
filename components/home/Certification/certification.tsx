@@ -6,7 +6,7 @@ import styles from "./certification.module.css";
 export default function Certification() {
   return (
     <section>
-      <h2 className={styles.subtitle}>Certifications & Test Scores</h2>
+      <h1>Certifications & Test Scores</h1>
 
       <Carousel>
         {certifications.map((c) => (

@@ -41,7 +41,7 @@ export default function Career() {
 
   return (
     <section className={styles.wrapper}>
-      <h2 className={styles.title}>Career Timeline</h2>
+      <h1>Career Timeline</h1>
 
       <div
         className={styles.timeline}

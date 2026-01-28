@@ -6,7 +6,7 @@ export default function About() {
 
   return (
     <section className={styles.about}>
-      <h2>About me</h2>
+      <h1>About me</h1>
 
       <p>
         Hello! My name is Jules, I’m a {age}-year-old French student currently

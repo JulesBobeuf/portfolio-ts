@@ -12,6 +12,7 @@
 }
 
 .title {
+    font-size: var(--title);
     margin-top: var(--space-md);
     margin-bottom: var(--space-md);
 }

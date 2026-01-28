@@ -6,7 +6,7 @@ import { courses } from "@/data/course";
 export default function Course() {
   return (
     <section>
-      <h2 className={styles.subtitle}>Online Courses</h2>
+      <h1>Online Courses</h1>
 
       <Carousel>
         {courses.map((c) => (
