@@ -1,7 +1,7 @@
 "use client"; // client
 
 import Link from "next/link";
-import { Avatar } from "../Avatar";
+import { Avatar } from "../../ui/Avatar";
 import styles from "./navbar.module.css";
 import { useState } from "react";
 

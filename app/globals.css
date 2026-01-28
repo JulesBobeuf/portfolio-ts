@@ -5,9 +5,80 @@
 :root {
   --foreground-rgb: rgb(255, 255, 255);
   --background-rgb: rgb(7, 18, 30);
+
+  /* Colors */
+  --bg: #0b0d12;
+  --card: #131722;
+  --text: #e6e6eb;
+  --muted: #a0a0b0;
+  --primary: #6366f1;
+
+  /* Spacing */
+  --space-xs: 0.5rem;
+  --space-sm: 1rem;
+  --space-md: 2rem;
+  --space-lg: 4rem;
+
+  /* Radius */
+  --radius: 12px;
+
+  /* Typography */
+  --title: 2.5rem;
+  --subtitle: 1.6rem;
+  --body: 1rem;
+}
+
+* {
+  box-sizing: border-box;
 }
 
 body {
-  color: var(--foreground-rgb);
-  background: var(--background-rgb);
+  margin: 0;
+  background: radial-gradient(
+    circle at top,
+    #0f172a 0%,
+    #020617 60%
+  );
+  color: #e5e7eb;
+  font-family: system-ui, sans-serif;
+}
+main {
+  margin: 2.5%;
+}
+
+h1 {
+  font-size: var(--title);
+  margin: 0;
+}
+
+h2 {
+  font-size: var(--subtitle);
+  margin-bottom: var(--space-md);
+}
+
+p {
+  margin-bottom: var(--space-sm);
+  line-height: 1.7;
+  color: var(--text);
+}
+
+.swiper-button-next,
+.swiper-button-prev {
+  color: #6366f1;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.swiper-pagination {
+  bottom: -2rem;
+}
+
+.swiper-pagination-bullet {
+  background: white !important;
+  opacity: 1;
+}
+
+.swiper-pagination-bullet-active {
+  background: var(--primary) !important;
+  opacity: 1;
 }

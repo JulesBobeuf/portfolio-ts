@@ -1,7 +1,7 @@
 import Image from "next/image";
 import styles from "./projectCard.module.css";
 import Link from "next/link";
-import { PropProjectCard } from "../dataProjects";
+import { PropProjectCard } from "../../../data/project";
 
 const projectCard = (prop: { projectCard: PropProjectCard}) => {
   return (

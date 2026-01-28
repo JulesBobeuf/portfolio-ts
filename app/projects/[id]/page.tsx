@@ -1,5 +1,5 @@
-import { PropProjectArticle, listPropProjectArticle } from "../dataProjects";
-import { ProjectArticle } from "../projectArticle";
+import { ProjectArticle } from "@/components/project/projectArticle";
+import { PropProjectArticle, listPropProjectArticle } from "@/data/project";
 
 export default async function ProjectItem(props: {
   params: Promise<{ id: string }>;

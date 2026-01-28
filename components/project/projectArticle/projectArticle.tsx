@@ -1,6 +1,6 @@
 import Image from "next/image";
 import styles from "./projectArticle.module.css";
-import {PropProjectArticle,  Contributor } from "../dataProjects";
+import {PropProjectArticle,  Contributor } from "../../../data/project";
 
 const projectArticle = (prop: {
    projectArticle : PropProjectArticle;

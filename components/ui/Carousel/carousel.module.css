@@ -1,0 +1,123 @@
+.carousel {
+    position: relative;
+    margin: 2rem auto;
+}
+
+/* No width:100% here anymore, as we're using max-width and auto margins to center */
+
+.viewport {
+    overflow: hidden;
+    width: 100%;
+    padding: 0 1rem;
+    box-sizing: border-box;
+}
+
+/* track */
+.track {
+    display: flex;
+    gap: 24px;
+    transition: transform 0.4s ease;
+    margin: 1rem 0;
+}
+
+/* cards never shrink */
+.track > * {
+    width: 320px;
+    flex-shrink: 0;
+}
+
+/* navigation arrows */
+.left,
+.right {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: rgba(15, 23, 42, 0.9);
+    color: #6366f1;
+    border: none;
+    font-size: 2rem;
+    padding: 0.5rem 1rem;
+    cursor: pointer;
+    z-index: 10;
+    border-radius: 50%;
+    transition: background 0.3s ease;
+}
+
+.left:hover,
+.right:hover {
+    background: rgba(15, 23, 42, 1);
+}
+
+.left {
+    left: -30px;
+}
+
+.right {
+    right: -30px;
+}
+
+/* dots */
+.dots {
+    display: flex;
+    justify-content: center;
+    margin-top: 1rem;
+}
+
+.dot {
+    width: 12px;
+    height: 12px;
+    background: #cbd5f5;
+    opacity: 0.5;
+    border-radius: 50%;
+    margin: 0 6px;
+    cursor: pointer;
+    transition: opacity 0.3s ease, background 0.3s ease;
+}
+
+.dot:hover {
+    opacity: 0.8;
+}
+
+.dot.active {
+    background: #6366f1;
+    opacity: 1;
+}
+
+/* ---------- RESPONSIVE RULES ---------- */
+
+/* Hide arrows on small screens if needed */
+@media (max-width: 639px) {
+    .left,
+    .right {
+        font-size: 1.5rem;
+        padding: 0.3rem 0.8rem;
+    }
+}
+
+/* Mobile */
+@media (max-width: 639px) {
+    .carousel {
+        max-width: 352px; /* 320 + paddings (2*16) */
+    }
+}
+
+/* Tablet → 2 cards */
+@media (min-width: 640px) and (max-width: 959px) {
+    .carousel {
+        max-width: 696px; /* 320*2 + gap + paddings (2*16) */
+    }
+}
+
+/* Laptop → 3 cards */
+@media (min-width: 960px) and (max-width: 1279px) {
+    .carousel {
+        max-width: 1040px; /* 320*3 + gaps*2 + paddings (2*16) */
+    }
+}
+
+/* Desktop → 4 cards */
+@media (min-width: 1280px) {
+    .carousel {
+        max-width: 1384px; /* 320*4 + gaps*3 + paddings (2*16) */
+    }
+}
