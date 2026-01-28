@@ -1,7 +1,7 @@
 "use client";
 
 import { useEffect, useState } from "react";
-import styles from "./Carousel.module.css";
+import styles from "./carousel.module.css";
 
 type CarouselProps = {
   children: React.ReactNode[];
