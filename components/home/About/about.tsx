@@ -1,4 +1,4 @@
-import { getAge } from "@/utils/getAge";
+import { getAge } from "@/util/getAge";
 import styles from "./about.module.css";
 
 export default function About() {

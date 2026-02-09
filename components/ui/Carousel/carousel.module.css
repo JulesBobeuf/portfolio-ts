@@ -1,10 +1,17 @@
 .carousel {
+    --card-width: 320px;
+    --gap: 24px;
+
     position: relative;
     margin: 2rem auto;
 }
 
-/* No width:100% here anymore, as we're using max-width and auto margins to center */
+/* wrapper for arrows + viewport */
+.frame {
+    position: relative;
+}
 
+/* viewport */
 .viewport {
     overflow: hidden;
     width: 100%;
@@ -15,45 +22,70 @@
 /* track */
 .track {
     display: flex;
-    gap: 24px;
+    gap: var(--gap);
     transition: transform 0.4s ease;
     margin: 1rem 0;
 }
 
-/* cards never shrink */
-.track > * {
-    width: 320px;
+/* cards */
+.track>* {
+    width: var(--card-width);
     flex-shrink: 0;
 }
 
-/* navigation arrows */
 .left,
 .right {
     position: absolute;
     top: 50%;
     transform: translateY(-50%);
+    width: 44px;
+    height: 44px;
+    border-radius: 50%;
     background: rgba(15, 23, 42, 0.9);
-    color: #6366f1;
     border: none;
-    font-size: 2rem;
-    padding: 0.5rem 1rem;
     cursor: pointer;
     z-index: 10;
-    border-radius: 50%;
-    transition: background 0.3s ease;
+    display: grid;
+    place-items: center;
 }
 
-.left:hover,
-.right:hover {
-    background: rgba(15, 23, 42, 1);
+.left::before,
+.right::before {
+    content: "";
+    width: 10px;
+    height: 10px;
+    border-top: 2px solid #6366f1;
+    border-right: 2px solid #6366f1;
 }
+
+.left::before {
+    transform: rotate(-135deg);
+}
+
+.right::before {
+    transform: rotate(45deg);
+}
+
 
 .left {
-    left: -30px;
+    left: -2rem;
 }
 
 .right {
-    right: -30px;
+    right: -2rem;
+}
+
+.left:hover:not(.disabled),
+.right:hover:not(.disabled) {
+    background: rgba(15, 23, 42, 1);
+    transform: translateY(-50%) scale(1.1);
+}
+
+/* disabled arrows */
+.disabled {
+    opacity: 0.35;
+    cursor: not-allowed;
+    pointer-events: none;
 }
 
 /* dots */
@@ -83,41 +115,45 @@
     opacity: 1;
 }
 
-/* ---------- RESPONSIVE RULES ---------- */
-
-/* Hide arrows on small screens if needed */
-@media (max-width: 639px) {
-    .left,
-    .right {
-        font-size: 1.5rem;
-        padding: 0.3rem 0.8rem;
-    }
-}
-
-/* Mobile */
+/* Mobile → 1 card */
 @media (max-width: 639px) {
     .carousel {
-        max-width: 352px; /* 320 + paddings (2*16) */
+        max-width: 352px;
+        /* 320 + padding */
+    }
+
+    .left,
+    .right {
+        width: 36px;
+        height: 36px;
+    }
+
+    .left {
+        left: 0.25rem;
+    }
+
+    .right {
+        right: 0.25rem;
     }
 }
 
 /* Tablet → 2 cards */
 @media (min-width: 640px) and (max-width: 959px) {
     .carousel {
-        max-width: 696px; /* 320*2 + gap + paddings (2*16) */
+        max-width: 696px;
     }
 }
 
 /* Laptop → 3 cards */
 @media (min-width: 960px) and (max-width: 1279px) {
     .carousel {
-        max-width: 1040px; /* 320*3 + gaps*2 + paddings (2*16) */
+        max-width: 1040px;
     }
 }
 
 /* Desktop → 4 cards */
 @media (min-width: 1280px) {
     .carousel {
-        max-width: 1384px; /* 320*4 + gaps*3 + paddings (2*16) */
+        max-width: 1384px;
     }
 }

@@ -1,6 +1,6 @@
 "use client";
 
-import { useEffect, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import styles from "./carousel.module.css";
 
 type CarouselProps = {
@@ -9,82 +9,66 @@ type CarouselProps = {
 
 export default function Carousel({ children }: CarouselProps) {
   const total = children.length;
-
-  const [visible, setVisible] = useState(1);
   const [index, setIndex] = useState(0);
+  const [visible, setVisible] = useState(1);
+  const frameRef = useRef<HTMLDivElement>(null);
+
+  const CARD = 320;
+  const GAP = 24;
+  const STEP = CARD + GAP;
 
   useEffect(() => {
-    const updateVisible = () => {
-      const width = window.innerWidth;
+    if (!frameRef.current) return;
 
-      if (width < 352) {
-        setVisible(0);
-      } else if (width < 640) {
-        setVisible(1);
-      } else if (width < 960) {
-        setVisible(2);
-      } else if (width < 1280) {
-        setVisible(3);
-      } else {
-        setVisible(4);
-      }
+    const observer = new ResizeObserver(([entry]) => {
+      const width = entry.contentRect.width;
+      const count = Math.floor((width + GAP) / STEP);
+      setVisible(Math.max(1, count));
+      setIndex(0); // reset safely
+    });
 
-      setIndex(0);
-    };
-
-    updateVisible();
-
-    window.addEventListener("resize", updateVisible);
-    return () => window.removeEventListener("resize", updateVisible);
+    observer.observe(frameRef.current);
+    return () => observer.disconnect();
   }, []);
 
-  if (visible === 0) {
-    return null; // Hide the entire carousel if screen is too small
-  }
-
   const maxIndex = Math.max(total - visible, 0);
-  const canScroll = maxIndex > 0;
 
-  const next = () => setIndex((i) => Math.min(i + 1, maxIndex));
   const prev = () => setIndex((i) => Math.max(i - 1, 0));
-
-  const trackStyle = {
-    transform: `translateX(-${index * 344}px)`,
-    width: canScroll ? 'fit-content' : '100%',
-    justifyContent: canScroll ? 'flex-start' : 'center',
-  };
+  const next = () => setIndex((i) => Math.min(i + 1, maxIndex));
 
   return (
     <div className={styles.carousel}>
-      {canScroll && (
-        <button className={styles.left} onClick={prev}>
-          ‹
-        </button>
-      )}
+      <div className={styles.frame} ref={frameRef}>
+        <button
+          className={`${styles.left} ${index === 0 ? styles.disabled : ""}`}
+          onClick={prev}
+          disabled={index === 0}
+          aria-label="Previous"
+        />
 
-      {canScroll && (
-        <button className={styles.right} onClick={next}>
-          ›
-        </button>
-      )}
-
-      <div className={styles.viewport}>
-        <div
-          className={styles.track}
-          style={trackStyle}
-        >
-          {children}
+        <div className={styles.viewport}>
+          <div
+            className={styles.track}
+            style={{ transform: `translateX(-${index * STEP}px)` }}
+          >
+            {children}
+          </div>
         </div>
+
+        <button
+          className={`${styles.right} ${index === maxIndex ? styles.disabled : ""}`}
+          onClick={next}
+          disabled={index === maxIndex}
+          aria-label="Next"
+        />
       </div>
 
-      {canScroll && (
+      {maxIndex > 0 && (
         <div className={styles.dots}>
           {Array.from({ length: maxIndex + 1 }).map((_, i) => (
             <span
               key={i}
-              className={`${styles.dot} ${
-                i === index ? styles.active : ""
-              }`}
+              className={`${styles.dot} ${i === index ? styles.active : ""}`}
               onClick={() => setIndex(i)}
             />
           ))}

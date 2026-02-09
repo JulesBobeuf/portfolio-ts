@@ -7,7 +7,7 @@ import { Course } from "@/components/home/Course";
 
 export default function Home() {
   return (
-    <Container>
+    <>
       <Hero />
       <hr className="my-8"></hr>
       <About />
@@ -17,6 +17,6 @@ export default function Home() {
       <Certification />
       <hr className="my-8"></hr>
       <Course />
-    </Container>
+    </>
   );
 }
