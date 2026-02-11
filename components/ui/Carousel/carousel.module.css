@@ -1,9 +1,6 @@
 .carousel {
-    --card-width: 320px;
-    --gap: 24px;
-
     position: relative;
-    margin: 2rem auto;
+    margin: var(--space-md) auto;
 }
 
 /* wrapper for arrows + viewport */
@@ -11,20 +8,18 @@
     position: relative;
 }
 
-/* viewport */
 .viewport {
     overflow: hidden;
     width: 100%;
-    padding: 0 1rem;
+    padding: 0;
     box-sizing: border-box;
 }
 
-/* track */
 .track {
     display: flex;
-    gap: var(--gap);
+    gap: var(--carousel-gap);
     transition: transform 0.4s ease;
-    margin: 1rem 0;
+    margin: var(--space-sm) 0;
 }
 
 /* cards */
@@ -38,15 +33,17 @@
     position: absolute;
     top: 50%;
     transform: translateY(-50%);
-    width: 44px;
-    height: 44px;
+    width: var(--control-size);
+    height: var(--control-size);
     border-radius: 50%;
-    background: rgba(15, 23, 42, 0.9);
+    background: var(--surface-interactive);
     border: none;
     cursor: pointer;
     z-index: 10;
     display: grid;
     place-items: center;
+
+    transition: transform 0.25s ease, background 0.25s ease;
 }
 
 .left::before,
@@ -54,8 +51,8 @@
     content: "";
     width: 10px;
     height: 10px;
-    border-top: 2px solid #6366f1;
-    border-right: 2px solid #6366f1;
+    border-top: var(--border-thin);
+    border-right: var(--border-thin);
 }
 
 .left::before {
@@ -65,7 +62,6 @@
 .right::before {
     transform: rotate(45deg);
 }
-
 
 .left {
     left: -2rem;
@@ -77,29 +73,28 @@
 
 .left:hover:not(.disabled),
 .right:hover:not(.disabled) {
-    background: rgba(15, 23, 42, 1);
+    background: var(--surface-interactive-hover);
     transform: translateY(-50%) scale(1.1);
 }
 
 /* disabled arrows */
 .disabled {
-    opacity: 0.35;
+    opacity: var(--opacity-disabled);
     cursor: not-allowed;
     pointer-events: none;
 }
 
-/* dots */
 .dots {
     display: flex;
     justify-content: center;
-    margin-top: 1rem;
+    margin-top: var(--space-sm);
 }
 
 .dot {
-    width: 12px;
-    height: 12px;
-    background: #cbd5f5;
-    opacity: 0.5;
+    width: var(--dot-size);
+    height: var(--dot-size);
+    background: var(--text-muted);
+    opacity: var(--opacity-muted);
     border-radius: 50%;
     margin: 0 6px;
     cursor: pointer;
@@ -107,25 +102,27 @@
 }
 
 .dot:hover {
-    opacity: 0.8;
+    opacity: var(--opacity-hover);
 }
 
 .dot.active {
-    background: #6366f1;
+    background: var(--accent);
     opacity: 1;
 }
 
 /* Mobile → 1 card */
 @media (max-width: 639px) {
+    .viewport {
+        padding: 0 0.6rem;
+    }
     .carousel {
-        max-width: 352px;
-        /* 320 + padding */
+        max-width: calc(var(--card-width) + 2rem);
     }
 
     .left,
     .right {
-        width: 36px;
-        height: 36px;
+        width: var(--control-size-sm);
+        height: var(--control-size-sm);
     }
 
     .left {
@@ -140,20 +137,20 @@
 /* Tablet → 2 cards */
 @media (min-width: 640px) and (max-width: 959px) {
     .carousel {
-        max-width: 696px;
+        max-width: calc(var(--card-width) * 2 + var(--carousel-gap));
     }
 }
 
 /* Laptop → 3 cards */
 @media (min-width: 960px) and (max-width: 1279px) {
     .carousel {
-        max-width: 1040px;
+        max-width: calc(var(--card-width) * 3 + var(--carousel-gap) * 2);
     }
 }
 
 /* Desktop → 4 cards */
 @media (min-width: 1280px) {
     .carousel {
-        max-width: 1384px;
+        max-width: calc(var(--card-width) * 4 + var(--carousel-gap) * 3);
     }
 }

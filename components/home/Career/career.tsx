@@ -28,7 +28,7 @@ export default function Career() {
   });
 
   // newest first
-  items.sort((a, b) => b.endIndex - a.endIndex);
+  items.sort((a, b) => b.startIndex - a.startIndex);
 
   const min = Math.min(...items.map((i) => i.startIndex));
   const max = Math.max(...items.map((i) => i.endIndex));
