@@ -26,6 +26,50 @@
   --title: 2.5rem;
   --subtitle: 1.6rem;
   --body: 1rem;
+
+  /* Surface */
+  --surface-1: rgba(15, 23, 42, 0.85);
+  --surface-2: rgba(15, 23, 42, 0.9);
+
+  --surface-shadow-sm: 0 10px 25px rgba(0, 0, 0, 0.25);
+  --surface-shadow-lg: 0 18px 35px rgba(0, 0, 0, 0.45);
+
+  --surface-interactive: var(--surface-2);
+  --surface-interactive-hover: rgba(15, 23, 42, 1);
+
+  /* Accent */
+  --accent: #6366f1;
+  --accent-hover: #818cf8;
+  --accent-soft: rgba(99, 102, 241, 0.35);
+
+  /* Text */
+  --text-primary: #e5e7eb;
+  --text-muted: #cbd5f5;
+  --text-subtle: #93c5fd;
+
+  /* Border */
+  --border-accent: 3px solid var(--accent);
+  --border-thin: 2px solid var(--accent);
+
+  /* Opacity */
+  --opacity-disabled: 0.35;
+  --opacity-muted: 0.5;
+  --opacity-hover: 0.8;
+  
+  /* Career Timeline Specific */
+  --timeline-axis: rgba(148, 163, 184, 0.25);
+  --timeline-axis-width: 5px;
+  --timeline-duration-width: 4px;
+  --timeline-connector-width: 34px;
+
+  /* Carousel Specific */
+  --card-width: 320px;
+  --carousel-gap: 24px;
+
+  --control-size: 44px;
+  --control-size-sm: 36px;
+
+  --dot-size: 12px;
 }
 
 * {
